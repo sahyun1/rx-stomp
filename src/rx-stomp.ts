@@ -423,6 +423,9 @@ export class RxStomp {
     return coldObservable.pipe(share());
   }
 
+  public unsubscribe(id:string, headers:StompHeaders){
+      this._stompClient.unsubscribe(id, headers);
+  }
   /**
    * Setup streaming unhandled messages.
    */
