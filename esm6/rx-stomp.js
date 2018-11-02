@@ -300,6 +300,9 @@ var RxStomp = /** @class */ (function () {
          */
         return coldObservable.pipe(share());
     };
+    RxStomp.prototype.unsubscribe = function (id, headers) {
+        this._stompClient.unsubscribe(id, headers);
+    };
     /**
      * Setup streaming unhandled messages.
      */

@@ -218,6 +218,7 @@ export declare class RxStomp {
      * Maps to: https://stomp-js.github.io/stompjs/classes/Client.html#subscribe
      */
     watch(destination: string, headers?: StompHeaders): Observable<IMessage>;
+    unsubscribe(id: string, headers: StompHeaders): void;
     /**
      * Setup streaming unhandled messages.
      */
